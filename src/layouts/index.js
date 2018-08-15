@@ -47,6 +47,7 @@ const TemplateWrapper = ({ children, isDrawerOpen, toggleDrawer }) => (
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
+      <Header />
       <Container>
         <Content isDrawerOpen={isDrawerOpen}>{children()}</Content>
       </Container>
@@ -55,7 +56,6 @@ const TemplateWrapper = ({ children, isDrawerOpen, toggleDrawer }) => (
         onClick={() => toggleDrawer(false)}
       />
       <Drawer />
-      <Header />
     </div>
   </ThemeProvider>
 );

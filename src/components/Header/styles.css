@@ -1,0 +1,11 @@
+.header__title {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  background-color: grey;
+}

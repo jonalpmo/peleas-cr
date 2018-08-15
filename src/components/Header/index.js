@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import Hamburger from './Hamburger';
 import { toggleDrawer as toggleDrawerAction } from '../../state/app';
 
+import './styles.css';
+
 const MenuIcon = styled.a`
   display: flex;
   align-items: center;
@@ -13,7 +15,9 @@ const MenuIcon = styled.a`
   align-self: stretch;
   transition: right 0.3s ease-in-out;
   left: ${p => (p.isDrawerOpen ? p.theme.size(1) : `-${p.theme.size(4)}`)};
+  color: black;
 `;
+
 
 const Navbar = styled.div`
   height: ${p => p.theme.size(4)};
@@ -28,27 +32,9 @@ const Navbar = styled.div`
   background: ${p => p.theme.palette.primary.main};
 `;
 
-const Top = styled.header`
-  display: flex;
-  align-items: center;
-  height: ${p => p.theme.size(4)};
-  width: 100vw;
-  position: fixed;
-  z-index: ${p => p.theme.zIndex.header + 25};
-  top: 0;
-  left: 0;
-`;
-
-const Title = styled(Link)`
-  color: ${p => p.theme.palette.primary.contrast};
-  padding-left: ${p => p.theme.size(1)};
-  text-decoration: none;
-  font-size: ${p => p.theme.size(2)};
-`;
-
 const Header = ({ isDrawerOpen, toggleDrawer }) => (
   <div>
-    <Top>
+    <div className="header__container" isDrawerOpen={isDrawerOpen}>
       <MenuIcon
         isDrawerOpen={isDrawerOpen}
         href="#"
@@ -56,9 +42,8 @@ const Header = ({ isDrawerOpen, toggleDrawer }) => (
       >
         <Hamburger />
       </MenuIcon>
-      <Title to="/">Gatsby</Title>
-    </Top>
-    <Navbar isDrawerOpen={isDrawerOpen} />
+      <Link className="header__title" to="/"><h1 to="/">Peleas CR</h1></Link>
+    </div>
   </div>
 );
 
