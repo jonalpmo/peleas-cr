@@ -35,7 +35,7 @@ const Item = styled.a`
   cursor: pointer;
 `;
 
-const items = [{ url: '/', name: 'Home' }, { url: '/page-2/', name: 'Page 2' }];
+const items = [{ url: '/', name: 'Home' }, { url: '/page-2/', name: 'Page 2' }, { url: '/eventos/', name: 'Eventos' }];
 
 const Drawer = ({ isDrawerOpen, toggleDrawer }) => (
   <Paper isDrawerOpen={isDrawerOpen}>
