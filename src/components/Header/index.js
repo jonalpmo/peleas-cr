@@ -35,14 +35,18 @@ const Navbar = styled.div`
 const Header = ({ isDrawerOpen, toggleDrawer }) => (
   <div>
     <div className="header__container" isDrawerOpen={isDrawerOpen}>
-      <MenuIcon
+      <div className="header__hamburger"
         isDrawerOpen={isDrawerOpen}
         href="#"
         onClick={() => toggleDrawer(!isDrawerOpen)}
       >
         <Hamburger />
-      </MenuIcon>
-      <Link className="header__title" to="/"><h1 to="/">Peleas CR</h1></Link>
+      </div>
+      <Link className="header__category-link" to="/">Inicio</Link>
+      <Link className="header__category-link" to="/">Eventos</Link>
+      <Link className="header__category-link" to="/">Noticias</Link>
+      <Link className="header__category-link" to="/">Galería</Link>
+      <Link className="header__category-link" to="/">Contacto</Link>
     </div>
   </div>
 );
