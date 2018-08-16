@@ -1,0 +1,25 @@
+.mastHead__container {
+  padding:  3rem 1.5rem;
+  background-color: #f4f4f4;
+  background-image: url('https://i2.wp.com/www.fightbookmma.com/wp-content/uploads/2017/05/mma-cage-at-an-event.png');
+}
+
+.mastHead__title-wrapper {
+  margin: 0 auto 3rem;
+}
+
+.mastHead__hero {
+  color: #fff;
+}
+
+.mastHead__evento-button {
+  margin-top: 3rem;
+  padding: 1rem 0.5rem;
+  background-color: #A00710;
+  max-width: 104.5px;
+}
+
+.mastHead__evento-link {
+  text-decoration: none;
+  color: #fff;
+}
