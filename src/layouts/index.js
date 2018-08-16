@@ -6,6 +6,7 @@ import { ThemeProvider } from 'emotion-theming';
 import Header from '../components/Header';
 import Drawer from '../components/Drawer';
 import theme from '../utils/theme';
+import Masthead from '../components/Masthead';
 import { toggleDrawer as toggleDrawerAction } from '../state/app';
 
 const Container = styled.main`
@@ -47,6 +48,7 @@ const TemplateWrapper = ({ children, isDrawerOpen, toggleDrawer }) => (
           { name: 'keywords', content: 'sample, something' },
         ]}
       />
+      <Masthead />
       <Header />
       <Container>
         <Content isDrawerOpen={isDrawerOpen}>{children()}</Content>
